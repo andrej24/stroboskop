@@ -46,6 +46,7 @@ window.addEventListener('load', function() {
 		start.addEventListener('click', zagon);
 	}
 	
+	
 	var zagon = function(event) {
 		vrednosti = [];
 		var barve = document.querySelectorAll("#barve > button");
@@ -54,8 +55,8 @@ window.addEventListener('load', function() {
 			vrednosti.push(barva.innerHTML);
 		}
 		
-		minCas = 1000;
-		maxCas = 1000;
+		minCas = document.getElementById("min").value;
+		maxCas = document.getElementById("max").value;
 		spremeniBarvo(0);
 		
 		var start = document.querySelector("#start");
@@ -63,7 +64,6 @@ window.addEventListener('load', function() {
 		start.removeEventListener('click', zagon);
 		start.addEventListener('click', stop);
 	}
-	
 	document.querySelector("#start").addEventListener('click', zagon);
 	
 });
